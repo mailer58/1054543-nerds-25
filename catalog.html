@@ -26,41 +26,65 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Форма-->
-        <h3>СОРТИРОВАТЬ:</h3>
-        <ul>
-          <li><a href="#">ПО ЦЕНЕ</a></li>
-          <li><a href="#">ПО ТИПУ</a></li>
-          <li><a href="#">ПО НАЗВАНИЮ</a></li>
-        </ul>
-      </section>
-      <section class="catalog">
-        <h2 class="visually-hidden">Каталог сайтов</h2>
-        <ul class="catalog-list">
-          <li class="catalog-item"><a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona"></a></li>
-          <li class="catalog-item"><a href=""><img src="img/img-pink.jpg" width="360" height="576" alt="Pink"></a></li>
-          <li class="catalog-item"><a href="#"><img src="img/img-barbershop.jpg" alt="Barbershop Borodinski"></a></li>
-          <li class="catalog-item"><a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"></a></li>
-          <li class="catalog-item"><a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="Education"></a></li>
-          <li class="catalog-item"><a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="Kvass"></a></li>
-        </ul>
-        <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item">СЛЕДУЮЩАЯ</li>
-       </ul>
-     </section>
-   </main>
-   <footer class="main-footer">
-     <div class="footer-social">
-       <b>Давайте дружить, это выгодно!</b>
-       <p class="discount">Скидка 10% для друзей из социальных сетей</p>
-       <ul>
-         <li><a class="social-button" href="#">Вконтакте</a></li>
-         <li><a class="social-button" href="#">Фейсбук</a></li>
-         <li><a class="social-button" href="#">Инстаграм</a></li>
-       </ul>
-     </div>
-   </footer>
- </body>
- </html>
+        <h3>СТОИМОСТЬ:</h3>
+        <form>
+          <div class="slidecontainer">
+            <input type="range" name="range" min="1" max="15000" value="50" class="slider" id="range-input" oninput="changeInput(this.value)">
+          </div>
+          <label class="slider-label" for="from-field">от</label>
+          <input type="text" value="0" name="from-field" id="from-field" class="slider-input">
+          <label class="slider-label" for="to-field">до
+            <input type="text" value="15000" name="to-field" id="to-field" class="slider-input" oninput="changeSlider(this.value)"></label>
+            <h3>СЕТКА:</h3>
+            <input type="radio" name="grid" value="adaptive" checked>Адаптивная<br>
+            <input type="radio" name="grid" value="fixed">Фиксированная<br>
+            <input type="radio" name="grid" value="elastic">Резиновая<br>
+            <h3>ОСОБЕННОСТИ:</h3>
+            <input type="checkbox" name="option1" value="slider" checked>Слайдер<br>
+            <input type="checkbox" name="option2" value="advantage">Блок преимуществ<br>
+            <input type="checkbox" name="option3" value="news" checked>Новости<br>
+            <input type="checkbox" name="option4" value="gallery">Галерея<br>
+            <input type="checkbox" name="option5" value="basket">Корзина<br>
+            <div  class="slidecontainer">
+              <input type="submit" value="ПОКАЗАТЬ">
+            </div>
+          </form>
+          <h3>СОРТИРОВАТЬ:</h3>
+          <ul>
+            <li><a href="#">ПО ЦЕНЕ</a></li>
+            <li><a href="#">ПО ТИПУ</a></li>
+            <li><a href="#">ПО НАЗВАНИЮ</a></li>
+          </ul>
+        </section>
+        <section class="catalog">
+          <h2 class="visually-hidden">Каталог сайтов</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item"><a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona"></a></li>
+            <li class="catalog-item"><a href=""><img src="img/img-pink.jpg" width="360" height="576" alt="Pink"></a></li>
+            <li class="catalog-item"><a href="#"><img src="img/img-barbershop.jpg" alt="Barbershop Borodinski"></a></li>
+            <li class="catalog-item"><a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka"></a></li>
+            <li class="catalog-item"><a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="Education"></a></li>
+            <li class="catalog-item"><a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="Kvass"></a></li>
+          </ul>
+          <ul class="pagination-list">
+            <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item">СЛЕДУЮЩАЯ</li>
+          </ul>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="footer-social">
+          <b>Давайте дружить, это выгодно!</b>
+          <p class="discount">Скидка 10% для друзей из социальных сетей</p>
+          <ul>
+            <li><a class="social-button" href="#">Вконтакте</a></li>
+            <li><a class="social-button" href="#">Фейсбук</a></li>
+            <li><a class="social-button" href="#">Инстаграм</a></li>
+          </ul>
+        </div>
+      </footer>
+      <script src="js/script.js"></script>
+    </body>
+    </html>
