@@ -21,6 +21,11 @@
         <li><a href="shopping-cart.html">КОРЗИНА</a></li>
       </ul>
     </nav>
+    <ul class="slides">
+      <li><input type="radio" name="slide1" id="slide1" checked></li>
+      <li><input type="radio" name="slide2" id="slide2"></li>
+      <li><input type="radio" name="slide3" id="slide3"></li>
+    </ul>
   </header>
 <main class="container">
   <section class="intro">
@@ -63,10 +68,10 @@
 <section class="examples-list">
   <h3 class="visually-hidden">Примеры работ</h3>
   <ul class="examples-list-ul">
-    <li><a>html academy</a></li>
-    <li><a>Barbetshop Borodinski</a></li>
-    <li><a>Pink</a></li>
-    <li><a>MISHKA</a></li>
+    <li><a href="https://htmlacademy.ru" aria-label="Интерактивные онлайн-курсы" target="_blank">html academy</a></li>
+    <li><a href="#" aria-label="Barbershop Borodinski" target="_blank">Barbershop Borodinski</a></li>
+    <li><a href="#" aria-label="Pink - взгляните на жизнь иначе" target="_blank">Pink</a></li>
+    <li><a href="#" aria-label="MISHKA - милые штучки ручной работы для дома" target="_blank">MISHKA</a></li>
   </ul>
 </section>
 <div>
@@ -75,25 +80,28 @@
 </div>
 <div>
   <h2>Напишите нам</h2>
-    <form>
+  <form class="letter" method="post"
+        action="#">
       <label class="popup-label" for="name-field">Ваше имя:</label>
-      <input type="text" name="name" id="name-field">
+      <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
       <label class="popup-label" for="email-field">Ваш e-mail:</label>
-      <input type="email" name="email" id="email-field"><br>
-      <label class="popup-label" for="letter-field">Текст письма:</label><br>
-      <textarea name="letter" id="letter-field"></textarea><br>
-      <input type="submit" name="send" value="Отправить">
+      <input type="email" name="email" id="email-field" placeholder="email@example.com"><br>
+      <label class="popup-label" for="letter-field" >Текст письма:</label><br>
+      <textarea name="letter" id="letter-field" placeholder="В свободной форме"></textarea><br>
+      <button type="submit">Отправить</button>
     </form>
 </div>
 </main>
 <footer class="main-footer">
-  <div class="footer-social">
+  <div class="footer  promo">
     <b>Давайте дружить, это выгодно!</b>
     <p class="discount">Скидка 10% для друзей из социальных сетей</p>
-    <ul>
-      <li><a class="social-button" href="#">Вконтакте</a></li>
-      <li><a class="social-button" href="#">Фейсбук</a></li>
-      <li><a class="social-button" href="#">Инстаграм</a></li>
+  </div>
+  <div class="footer  social">
+    <ul class="footer  social-list">
+      <li><a class="social-button" href="#" aria-label="Мы в Контакте" target="_blank"><img src="img/vk-icon.svg" alt="Мы в Контакте"></a></li>
+      <li><a class="social-button" href="#" aria-label="Мы в Фейсбук" target="_blank"><img src="img/fb-icon.svg" alt="Мы в Фейсбук"></a></li>
+      <li><a class="social-button" href="#" aria-label="Мы в Инстаграм" target="_blank"><img src="img/insta-icon.svg" alt="Мы в Инстаграм"></a></li>
     </ul>
   </div>
 </footer>

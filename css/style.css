@@ -63,5 +63,16 @@
 }
 
 .visually-hidden {
-display: none;
+  display: none;
+}
+
+footer .social-button {
+  background: url("../img/footer-baseShape.svg") no-repeat;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.catalog-item-purchase {
+  text-align: left;
+  background-color: #eeeeee;
 }
