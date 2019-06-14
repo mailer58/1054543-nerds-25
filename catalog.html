@@ -10,48 +10,60 @@
   </head>
 
   <body>
+    <header class="main-header catalog-header">
+      <nav class="container main-navigation">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/nerds-logo.svg" alt="Логотип магазина Nerd's">
+        </a>
 
-    <header class="main-header">
-      <div class="header-container-catalog">
-        <nav class="main-navigation">
-          <a class="main-header-logo" href="index.html">
-            <img src="img/nerds-logo.svg" alt="Логотип магазина Nerd's">
-          </a>
-          <ul class="site-navigation">
-            <li><a href="studio.html">Студия</a></li>
-            <li><a href="clients.html">Клиенты</a></li>
-            <li>
-              <div class="site-navigation-current">
-                <a href="catalog.html">Магазин</a>
-              </div>
-            </li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
-          <ul class="cart">
-            <li><a href="shopping-cart.html" class="site-navigation shopping-cart">Корзина</a></li>
-          </ul>
-        </nav>
-        <h1 class="catalog-title">Магазин готовых шаблонов</h1>
-      </div>
+        <ul class="site-navigation">
+          <li><a href="studio.html">Студия</a></li>
+          <li><a href="clients.html">Клиенты</a></li>
+          <li>
+            <div class="site-navigation-current">
+              <a href="catalog.html">Магазин</a>
+            </div>
+          </li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
 
+        <ul class="cart">
+          <li>
+            <a href="shopping-cart.html" class="shopping-cart">Корзина</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
     </header>
 
+    <!--main-->
+
     <main class="main-container">
-      <div class="columns">
+      <div class="container columns">
+
+        <!--left-column-->
         <div class="left-column">
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="big-margin">
-                <legend class="caption">Стоимость:</legend>
-                <div class="slidecontainer">
-                  <input type="range" name="range" min="1" max="15000" value="50" class="slider" id="range-input" oninput="changeInput(this.value)">
+              <fieldset class="filter-item">
+                <legend>Стоимость:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="margin-left: 5%; width: 60%"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                    <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                  </div>
                 </div>
-                <label class="slider-label" for="from-field">от</label>
-                <input type="text" value="0" name="from-field" id="from-field" class="slider-input">
-                <label class="slider-label" for="to-field">до</label>
-                <input type="text" value="15000" name="to-field" id="to-field" class="slider-input" oninput="changeSlider(this.value)">
               </fieldset>
+
               <fieldset class="small-margin">
                 <legend class="caption">Сетка:</legend>
                 <ul class="grid">
@@ -121,9 +133,14 @@
             </form>
           </section>
         </div>
+
+
+        <!--right-column-->
         <div class="right-column">
+
+          <!--sorting-buttons-->
           <section class="sorting-buttons">
-            <h3 class="caption exception">Сортировать:</h3>
+            <h2 class="caption">Сортировать:</h2>
             <ul class="sorting-btns-list">
               <li><a href="#" class="sorting">По цене</a></li>
               <li><a href="#" class="sorting inactive">По типу</a></li>
@@ -133,6 +150,7 @@
             </ul>
           </section>
 
+          <!--catalog-->
           <section class="catalog">
             <h2 class="visually-hidden">Каталог сайтов</h2>
             <ul class="catalog-list">
@@ -141,17 +159,17 @@
                   <img src="img/img-sedona.jpg" width="360" height="576" alt="Миниатюра макета Sedona">
                 </a>
                 <div class="catalog-item-purchase">
-                  <h3><span class="caption">Sedona</span></h3>
-                  <p class="catalog-item-description">Информационный сайт для туристов</p>
-                  <a class="button price red" href="#">9900 РУБ.</a>
+                  <h3 class="caption">Sedona</h3>
+                  <p class="catalog-item-description">Информационный сайт<br> для туристов</p>
+                  <a class="button btn-price btn-red" href="#">9900 РУБ.</a>
                 </div>
               </li>
               <li class="catalog-item">
                 <a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="Миниатюра макета Pink"></a>
                 <div class="catalog-item-purchase">
-                  <h3><span class="caption">Pink app</span></h3>
+                  <h3 class="caption">Pink app</h3>
                   <p class="catalog-item-description">Продуктовый лендинг<br> приложения для iOS и Android</p>
-                  <a class="button price red" href="#">9900 РУБ.</a>
+                  <a class="button btn-price btn-red" href="#">9900 РУБ.</a>
                 </div>
               </li>
               <li class="catalog-item">
@@ -159,56 +177,75 @@
                 <div class="catalog-item-purchase">
                   <h3><span class="caption">Barbershop</span></h3>
                   <p class="catalog-item-description">Сайт салона красоты.<br>Для мужчин, да.</p>
-                  <a class="button price red" href="#">9900 РУБ.</a>
+                  <a class="button btn-price btn-red" href="#">9900 РУБ.</a>
                 </div>
               </li>
               <li class="catalog-item">
                 <a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="Миниатюра макета Mishka"></a>
                 <div class="catalog-item-purchase">
-                  <h3><span class="caption">Mishka</span></h3>
+                  <h3 class="caption">Mishka</h3>
                   <p class="catalog-item-description">Интернет-магазин вязаных игрушек.<br>Для мужчин, да.</p>
-                  <a class="button price red" href="#">9900 РУБ.</a>
+                  <a class="button btn-price btn-red" href="#">9900 РУБ.</a>
                 </div>
               </li>
               <li class="catalog-item">
                 <a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="Миниатюра макета A PLUS"></a>
                 <div class="catalog-item-purchase">
-                  <h3><span class="caption">A Plus</span></h3>
+                  <h3 class="caption">A Plus</h3>
                   <p class="catalog-item-description">Лендинг курсов повышения<br>квалификации</p>
-                  <a class="button price red" href="#">9900 РУБ.</a>
+                  <a class="button btn-price btn-red" href="#">9900 РУБ.</a>
                 </div>
               </li>
               <li class="catalog-item">
                 <a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="Миниатюра макета КВАСТ"></a>
                 <div class="catalog-item-purchase">
-                  <h3><span class="caption">Кваст</span></h3>
+                  <h3 class="caption">Кваст</h3>
                   <p class="catalog-item-description">Промо-сайт производителя<br>кравтового кваса</p>
-                  <a class="button price red" href="#">9900 РУБ.</a>
+                  <a class="button btn-price btn-red" href="#">9900 РУБ.</a>
                 </div>
               </li>
             </ul>
+
+            <!--pagination-list-->
             <ul class="pagination-list">
               <li><a href="#" class="pagination-item-current">1</a></li>
               <li><a href="#" class="pagination-item">2</a></li>
               <li><a href="#" class="pagination-item">3</a></li>
               <li><a href="#" class="pagination-item pgn-item-next">Следующая</a></li>
             </ul>
+
           </section>
         </div>
       </div>
     </main>
 
+    <!--main-footer-->
+
     <footer class="main-footer">
-      <ul class="social-list">
-        <li class="social-button"><a class="social-button vk" href="#" aria-label="Мы в Контакте" target="_blank"></a></li>
-        <li class="social-button"><a class="social-button fb" href="#" aria-label="Мы в Фейсбук" target="_blank"></a></li>
-        <li class="social-button"><a class="social-button insta" href="#" aria-label="Мы в Инстаграм" target="_blank"></a></li>
-      </ul>
-      <div class="promo">
-        <b>Давайте дружить, это выгодно!</b>
-        <p class="discount">Скидка 10% для друзей из социальных сетей</p>
+      <div class="container footer-container">
+
+        <ul class="social-list">
+          <li class="social-button">
+            <a class="social-button vk" href="#" aria-label="Мы в Контакте" target="_blank">
+            </a>
+          </li>
+          <li class="social-button">
+            <a class="social-button fb" href="#" aria-label="Мы в Фейсбук" target="_blank">
+            </a>
+          </li>
+          <li class="social-button">
+            <a class="social-button insta" href="#" aria-label="Мы в Инстаграм" target="_blank">
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer-promo">
+          <b>Давайте дружить, это выгодно!</b>
+          <p class="footer-discount">Скидка 10% для друзей из социальных сетей</p>
+        </div>
       </div>
     </footer>
+
     <script src="js/script.js"></script>
   </body>
 
