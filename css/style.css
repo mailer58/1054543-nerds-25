@@ -386,9 +386,6 @@ a {
 
 .services-list p {
   margin-bottom: 7px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #283136;
 }
 
 /*--description--*/
@@ -398,8 +395,6 @@ a {
   justify-content: space-between;
   border-top: 2px solid #eeeeee;
   padding-top: 36px;
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .description-left-column {
@@ -421,24 +416,10 @@ a {
 }
 
 .description-right-column {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-.nerds-image {
   width: 360px;
-  height: 208px;
-  background-image: url("../img/nerds-illustration.png");
-  position: relative;
-  bottom: -5px;
-  margin-bottom: 41px;
 }
 
 .small-text {
-  font-size: 16px;
   line-height: 18px;
 }
 
@@ -472,7 +453,6 @@ a {
   height: 52px;
   opacity: 1;
   background-color: #eeeeee;
-  ;
 }
 
 .examples-list li:nth-child(3)::after {
@@ -1209,8 +1189,19 @@ input:required:invalid {
 }
 
 .table-container {
+  position: relative;
+  width: 100%;
+  padding-top: 250px;
+}
+
+.table-container::before {
+  content: "";
+  position: absolute;
+  display: block;
   width: 360px;
-  box-sizing: border-box;
+  height: 208px;
+  background-image: url(../img/nerds-illustration.png);
+  top: 5px;
 }
 
 .table-container td {
