@@ -15,38 +15,30 @@
         <a class="main-header-logo" href="index.html">
           <img src="img/nerds-logo.svg" alt="Логотип магазина Nerd's">
         </a>
-
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
-          <li>
-            <div class="site-navigation-current">
-              <a href="catalog.html">Магазин</a>
-            </div>
+          <li class="site-navigation-current">
+            <a href="catalog.html">Магазин</a>
           </li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-
         <ul class="cart">
           <li>
             <a href="shopping-cart.html" class="shopping-cart">Корзина</a>
           </li>
         </ul>
       </nav>
-
       <h1 class="catalog-title">Магазин готовых шаблонов</h1>
     </header>
-
     <!--main-->
-
     <main class="main-container">
       <div class="container columns">
-
         <!--left-column-->
         <div class="left-column">
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form action="https://echo.htmlacademy.ru" method="get">
+            <form method="get">
               <fieldset class="filter-item">
                 <legend>Стоимость:</legend>
                 <div class="range-filter">
@@ -63,7 +55,6 @@
                   </div>
                 </div>
               </fieldset>
-
               <fieldset class="small-margin">
                 <legend class="caption">Сетка:</legend>
                 <ul class="grid">
@@ -133,11 +124,8 @@
             </form>
           </section>
         </div>
-
-
         <!--right-column-->
         <div class="right-column">
-
           <!--sorting-buttons-->
           <section class="sorting-buttons">
             <h2 class="caption">Сортировать:</h2>
@@ -149,7 +137,6 @@
               <li><a href="#" aria-label="Сортировать по убыванию"><img src="img/icon-up-dir.svg" class="sorting-icon inactive" alt="Сортировать по убыванию"></a></li>
             </ul>
           </section>
-
           <!--catalog-->
           <section class="catalog">
             <h2 class="visually-hidden">Каталог сайтов</h2>
@@ -205,7 +192,6 @@
                 </div>
               </li>
             </ul>
-
             <!--pagination-list-->
             <ul class="pagination-list">
               <li><a href="#" class="pagination-item-current">1</a></li>
@@ -213,17 +199,44 @@
               <li><a href="#" class="pagination-item">3</a></li>
               <li><a href="#" class="pagination-item pgn-item-next">Следующая</a></li>
             </ul>
-
           </section>
         </div>
       </div>
+      <!-- Map -->
+      <section class="map">
+        <h3 class="visually-hidden">Как до нас добраться</h3>
+        <div class="write-us">
+          <h2 class="visually-hidden">Напишите нам</h2>
+          <h3>Nёrds Design Studio</h3>
+          <p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8 <br><br>тел. +7 (812) 275-75-75</p>
+          <a href="#" class="button btn-message btn-red">Напишите нам</a>
+        </div>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCS5NSiG" width="" height="416"></iframe>
+      </section>
+      <!-- popup window -->
+      <section class="popup-window">
+        <h2>Напишите нам</h2>
+        <form method="post" class="message">
+          <div class="message-inputs-container">
+            <div class="message-inputs-subcontainer-left">
+              <label for="name-field">Ваше имя:</label>
+              <input type="text" class="message-input" name="name-field" id="name-field" placeholder="Имя Фамилия">
+            </div>
+            <div class="message-inputs-subcontainer-right">
+              <label for="email-field">Ваш e-mail:</label>
+              <input type="email" class="message-input" name="email-field" id="email-field" placeholder="email@example.com">
+            </div>
+          </div>
+          <label for="message-field">Текст письма:</label>
+          <textarea name="message" class="message-textarea" id="message-field" placeholder="В свободной форме"></textarea>
+          <button type="submit" class="button message-button btn-red">Отправить</button>
+        </form>
+        <button class="message-close" type="button">Закрыть</button>
+      </section>
     </main>
-
     <!--main-footer-->
-
     <footer class="main-footer">
       <div class="container footer-container">
-
         <ul class="social-list">
           <li class="social-button">
             <a class="social-button vk" href="#" aria-label="Мы в Контакте" target="_blank">
@@ -238,14 +251,12 @@
             </a>
           </li>
         </ul>
-
         <div class="footer-promo">
           <b>Давайте дружить, это выгодно!</b>
           <p class="footer-discount">Скидка 10% для друзей из социальных сетей</p>
         </div>
       </div>
     </footer>
-
     <script src="js/script.js"></script>
   </body>
 
