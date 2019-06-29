@@ -30,10 +30,9 @@ open.addEventListener("click", function(evt) {
   }
   if (user_name_storage) {
     text.focus();
+  } else {
+    user_name.focus();
   }
- else  {
-  user_name.focus();
-}
 
 
 });
@@ -61,7 +60,7 @@ text.addEventListener("click", function(evt) {
 
 
 form.addEventListener("submit", function(evt) {
-  if (!user_name.value)  {
+  if (!user_name.value) {
     evt.preventDefault();
 
     user_name.classList.add("warning");
@@ -71,40 +70,37 @@ form.addEventListener("submit", function(evt) {
     console.log(user_name.classList);
     console.log("Нужно ввести логин и пароль");
   }
-    if (!email.value) {
-      evt.preventDefault();
-email.classList.add("warning");
-popup.classList.remove("shake-error");
-popup.offsetWidth = popup.offsetWidth;
-popup.classList.add("shake-error");
-      console.log(user_name.classList);
-      console.log("Нужно ввести логин и пароль");
-    }
-    if (!text.value) {
-      evt.preventDefault();
+  if (!email.value) {
+    evt.preventDefault();
+    email.classList.add("warning");
+    popup.classList.remove("shake-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("shake-error");
+    console.log(user_name.classList);
+    console.log("Нужно ввести логин и пароль");
+  }
+  if (!text.value) {
+    evt.preventDefault();
 
-      text.classList.add("warning");
-      popup.classList.remove("shake-error");
-      popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add("shake-error");
-      console.log(user_name.classList);
-      console.log("Нужно ввести логин и пароль");
-    }
-
-
-  else {
+    text.classList.add("warning");
+    popup.classList.remove("shake-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("shake-error");
+    console.log(user_name.classList);
+    console.log("Нужно ввести логин и пароль");
+  } else {
     if (isStorageSupport) {
       localStorage.setItem("user_name", user_name.value);
       localStorage.setItem("email", email.value);
     }
   }
 });
-window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("popup-window-show")) {
-        popup.classList.remove("popup-window-show");
-      }
-      popup.classList.remove("shake-error");
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (popup.classList.contains("popup-window-show")) {
+      popup.classList.remove("popup-window-show");
     }
-  });
+    popup.classList.remove("shake-error");
+  }
+});
