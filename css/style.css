@@ -574,7 +574,8 @@ a {
 .map .container {
   position: relative;
   padding: 0;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   height: 416px;
   background: rgb(223, 229, 220) url("../img/img-map.jpg") no-repeat center center;
 }
@@ -594,11 +595,11 @@ a {
 .write-us {
   position: absolute;
   top: 55px;
-  left: 141px;
+  left: 140px;
   width: 319px;
   min-height: 308px;
   background-color: rgb(255, 255, 255);
-  padding: 49px 50px;
+  padding: 49px 49px 49px 51px;
   box-sizing: border-box;
   text-align: left;
   z-index: 100;
