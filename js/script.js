@@ -1,12 +1,10 @@
 var open = document.querySelector(".btn-message");
 var popup = document.querySelector(".popup-window");
 var close = popup.querySelector(".message-close");
-
 var form = popup.querySelector("form");
 var user_name = document.querySelector("#name-field");
 var email = popup.querySelector("#email-field");
 var text = popup.querySelector("#message-field");
-
 var isStorageSupport = true;
 var user_name_storage = "";
 var email_storage = "";
@@ -33,8 +31,6 @@ open.addEventListener("click", function(evt) {
   } else {
     user_name.focus();
   }
-
-
 });
 
 close.addEventListener("click", function(evt) {
@@ -58,11 +54,9 @@ text.addEventListener("click", function(evt) {
   text.classList.remove("warning");
 });
 
-
 form.addEventListener("submit", function(evt) {
   if (!user_name.value) {
     evt.preventDefault();
-
     user_name.classList.add("warning");
     popup.classList.remove("shake-error");
     popup.offsetWidth = popup.offsetWidth;
@@ -81,7 +75,6 @@ form.addEventListener("submit", function(evt) {
   }
   if (!text.value) {
     evt.preventDefault();
-
     text.classList.add("warning");
     popup.classList.remove("shake-error");
     popup.offsetWidth = popup.offsetWidth;
@@ -95,6 +88,7 @@ form.addEventListener("submit", function(evt) {
     }
   }
 });
+
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
