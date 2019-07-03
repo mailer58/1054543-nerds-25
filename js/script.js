@@ -61,8 +61,6 @@ form.addEventListener("submit", function(evt) {
     popup.classList.remove("shake-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("shake-error");
-    console.log(user_name.classList);
-    console.log("Нужно ввести логин и пароль");
   }
   if (!email.value) {
     evt.preventDefault();
@@ -70,8 +68,6 @@ form.addEventListener("submit", function(evt) {
     popup.classList.remove("shake-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("shake-error");
-    console.log(user_name.classList);
-    console.log("Нужно ввести логин и пароль");
   }
   if (!text.value) {
     evt.preventDefault();
@@ -79,8 +75,6 @@ form.addEventListener("submit", function(evt) {
     popup.classList.remove("shake-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("shake-error");
-    console.log(user_name.classList);
-    console.log("Нужно ввести логин и пароль");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("user_name", user_name.value);
