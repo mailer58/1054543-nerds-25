@@ -344,8 +344,8 @@ a {
 }
 
 .btn-message {
-  max-width: 219px;
-  padding: 16px 44px;
+  width: 100%;
+  padding: 16px 0;
 }
 
 .btn-item {
@@ -890,7 +890,7 @@ a {
 
 .footer-promo {
   margin-top: 6px;
-  width: 555px;
+  width: 570px;
 }
 
 .footer-promo b {
